@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Tradebroker Programming</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href={{ url_for('static', filename='css/bootstrap.min.css') }} rel="stylesheet">
+	<link rel="shortcut icon" href={{ url_for('static', filename='favicon.ico') }}>
+
+</head>
+
+
+<header>
+
+	<div class="col-md-4 text-center">
+      <a class="navbar-brand" href="/">
+      	<img style="max-width:240px; magin-top: -7px" src={{ url_for('static', filename='images/mainlogo.png') }}>
+      </a>
+    </div>
+
+</header>
+
+
+<body>
+	<div class = "col-md-4 text-center">
+		<h5>1. Last opp regnearket du vil sammenligne priser med:</h5>
+
+		<h6>Navnene på regnearkfilene er nød til å være:</h6>
+		<h6>+--------------------------------------+</h6>
+		<h6>WJ: wj.xlsx</h6>
+		<h6>+--------------------------------------+</h6>
+		<h6>Elektroskandia: es.xlsx</h6>
+		<h6>+--------------------------------------+</h6>
+
+		<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+			<input type="file" name="file" multiple>
+			<input type="submit" name="send">
+		</form>
+
+		<h5>2. Velg nettbutikk du skal sammenligne priser hos:</h5>
+		<form action="/wj/" method="POST">
+			<input type="submit" id="WJ" name="WJ" value="Wittusen & Jensen" class="btn btn-primary">
+		</form>
+		
+		<form action="/es/" method="POST">
+			<input type="submit" id="es" name="es" value="Elektroskandia" class="btn btn-primary">
+		</form>
+	</div>
+</body>
+
+
+</html>

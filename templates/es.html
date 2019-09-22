@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Tradebroker Programming</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href={{ url_for('static', filename='css/bootstrap.min.css') }} rel="stylesheet">
+	<link rel="shortcut icon" href={{ url_for('static', filename='favicon.ico') }}>
+
+</head>
+
+
+<header>
+
+	<div class="col-md-4 text-center">
+      <a class="navbar-brand" href="/">
+      	<img style="max-width:240px; magin-top: -7px" src={{ url_for('static', filename='images/mainlogo.png') }}>
+      </a>
+    </div>
+
+</header>
+
+
+<body>
+	
+	<div class = "col-md-4 text-center">
+		<form action="/download_es/" method="POST">
+			<input type="submit" id="download_es" name="download_es" value="Last ned regnearket med prisforskjellene" class="btn btn-primary">
+		</form>
+		
+		<form action="/" method="POST">
+			<input type="submit" id="back" name="back" value="Tilbake til hovedsiden" class="btn btn-primary">
+		</form>
+	</div>
+	
+</body>
+
+
+</html>
